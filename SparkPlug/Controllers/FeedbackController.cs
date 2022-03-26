@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SparkPlug.Core;
@@ -16,9 +17,12 @@ namespace SparkPlug.Controllers
     public class FeedbackController : ControllerBase
     {
         private readonly FeedbackService _service;
-        public FeedbackController(FeedbackService service)
+        private readonly IMapper _mapper;
+
+        public FeedbackController(FeedbackService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         [HttpPost("")]
@@ -26,16 +30,7 @@ namespace SparkPlug.Controllers
         {
             try
             {
-                var feedback = new Feedback
-                {
-                    CustomerName = model.CustomerName,
-                    CustomerEmail = model.CustomerEmail,
-                    CustomerMessage = model.CustomerMessage,
-                    DomainName = model._formDomainName,
-                    FormName = model._formName,
-                };
-
-                // validate feedback data before inserting data
+                var feedback = _mapper.Map<Feedback>(model);
                 var validation = _service.ValidateFeedback(feedback);
                 if (validation != null)
                     return Ok(new { success = false, message = validation });
