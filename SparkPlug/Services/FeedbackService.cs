@@ -11,10 +11,10 @@ namespace SparkPlug.Services
 {
     public class FeedbackService
     {
-        private MongoClient mongoClient;
+        private MongoClient _mongoClient;
         public FeedbackService(IDatabaseSettings settings)
         {
-            mongoClient = new MongoClient(settings.ConnectionString);
+            _mongoClient = new MongoClient(settings.ConnectionString);
         }
 
         public void InsertData(Feedback feedback)
@@ -25,7 +25,7 @@ namespace SparkPlug.Services
 
         private IMongoCollection<Feedback> ConnectToCustomerTable(string domainName, string formName)
         {
-            var db = mongoClient.GetDatabase(domainName);
+            var db = _mongoClient.GetDatabase(domainName);
             var data = db.GetCollection<Feedback>(formName);
 
             return data;
