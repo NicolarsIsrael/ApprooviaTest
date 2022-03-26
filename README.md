@@ -15,13 +15,12 @@ The Application helps Spark plug web design agencies to satisfy their customers 
   <h2>How to run</h2>
   <ol>
     <li>Build the solution</li>
-    <li>Right click on Solution Explorer and set startup projects to both "SparkPlug" and "SparkPlug.Web"</li>
-    <li>Install the following packages if not properly installed by the project build - AutoMapper.Extensions.Microsoft.DependencyInjection, Microsoft.AspNetCore.Cors, MongoDB.Driver
-    <li>Start project</li>
+    <li>Install the following packages if not properly installed by the project build - AutoMapper.Extensions.Microsoft.DependencyInjection, Microsoft.AspNetCore.Cors, MongoDB.Driver</li>
+    <li>Right click on Solution (SparkPlug) and set startup projects to both "SparkPlug" and "SparkPlug.Web"</li>
+    <li>Start the projects by clicking on Start </li>
     <li>Start mongo db server.  <br>
       follow the link https://www.mongodb.com/docs/manual/tutorial/manage-mongodb-processes/ on how to start a mongo db server
     </li>
-    <li></li>
   </ol>
   
   The solution starts with the two projects (SparkPlug and SparkPlug.Web) loaded. The Web project containing the HTML, CSS and Javascript. While the API project receives request.
