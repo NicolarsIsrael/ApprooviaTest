@@ -25,19 +25,23 @@ namespace SparkPlug.Controllers
         {
             try
             {
+                // validate feedback data before inserting data
+                var validation = _service.ValidateFeedback(feedback);
+                if (validation != null)
+                    return Ok(new { success = false, message = validation });
+
+                // insert data
                 _service.InsertData(feedback);
+
+                // return success message
                 return Ok(new { success = true, message = "successful" });
             }
             catch (Exception ex)
             {
+                // catch and return error
                 return Ok(new { success = false, message = ex.Message });
             }
         }
 
-        [HttpGet("")]
-        public IActionResult Get()
-        {
-            return Ok();
-        }
     }
 }

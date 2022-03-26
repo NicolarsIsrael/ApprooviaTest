@@ -34,7 +34,9 @@ namespace SparkPlug
             services.AddSingleton<IDatabaseSettings>(provider =>
                 provider.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(
+        options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+
             services.AddScoped<FeedbackService>();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
