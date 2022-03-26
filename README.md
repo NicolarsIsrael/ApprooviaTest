@@ -29,7 +29,7 @@ The Application helps Spark plug web design agencies to satisfy their customers 
   
   ## SAMPLE REQUEST
 
-``` https://localhost:44387/api/feedback ```
+``` POST - https://localhost:44387/api/feedback ```
 
 ``` javascript
 { 
@@ -40,6 +40,7 @@ The Application helps Spark plug web design agencies to satisfy their customers 
     "FormName" : "Form2"
 }
 ```
+  ```Response: Successful```
   
   ## WHAT TO TEST
   After successfully starting both api and web projects. Fill the form appropriately and click on the "Send Feedback" button to submit. The inputs in the form is sent to the api which saves the data appropriately and sends a feedback message.
