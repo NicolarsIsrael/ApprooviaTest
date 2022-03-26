@@ -24,3 +24,14 @@ Mongo Db Server
   </ol>
   
   The solution starts with two projects loaded. The Web project containing the HTML, CSS and Javascript, and also the API project that receives request.
+  <h2>Sample Request</h2>
+  api route: /api/feedback
+  <br> Method: POST
+  <br>
+  body : { <br>
+    "CustomerName":"Bakare Israel", <br>
+    "CustomerEmail":"bakare@gmail.com", <br>
+    "CustomerMessage":"I enjoyed the service I received the last time I patronized your business", <br>
+    "DomainName":"Solado", <br>
+    "FormName":"Form2" <br>
+}
