@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug", "SparkPlug.csproj", "{831AEDCD-22E2-4F14-BCF6-90E30811255D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Web", "..\SparkPlug.Web\SparkPlug.Web.csproj", "{ED1E9CD1-D383-43AD-A383-B6E2F1CE15D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{831AEDCD-22E2-4F14-BCF6-90E30811255D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831AEDCD-22E2-4F14-BCF6-90E30811255D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831AEDCD-22E2-4F14-BCF6-90E30811255D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1E9CD1-D383-43AD-A383-B6E2F1CE15D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1E9CD1-D383-43AD-A383-B6E2F1CE15D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1E9CD1-D383-43AD-A383-B6E2F1CE15D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1E9CD1-D383-43AD-A383-B6E2F1CE15D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
