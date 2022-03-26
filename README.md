@@ -4,12 +4,12 @@ The Application helps Spark plug web design agencies to satisfy their customers 
 <h2>Requirements</h2>
 - The application targets ASP.NET Core 3.1 - Download and Install ASP.NET Core 3.1 SDK and ASP.NET Core 3.1 Runtime if not available on your machine. Both packages can be found here https://dotnet.microsoft.com/en-us/download/dotnet/3.1 <br>
 - MongoDb Server - You can download and install MongoDb Server here https://docs.mongodb.com/manual/administration/install-community/
-<h4>Packages<h4>
-<p>
-1. AutoMapper.Extensions.Microsoft.DependencyInjection <br>
-2. Microsoft.AspNetCore.Cors <br>
-3. MongoDB.Driver<br>
-  </p>
+<h4>Packages</h4>
+<ol>
+<li>AutoMapper.Extensions.Microsoft.DependencyInjection </li>
+<li>Microsoft.AspNetCore.Cors </li>
+<li>MongoDB.Driver</li>
+</ol>
 
   
   <h2>How to run</h2>
