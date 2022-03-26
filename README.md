@@ -2,7 +2,7 @@
 The Application helps Spark plug web design agencies to satisfy their customers better. To optimize and serve their customers better, a new feature is required. The featuer requires a smart API that automatically creates databases per websites, create tables per form and inserts data to respective tables when the forms consume the APIs
 
 <h2>Requirements</h2>
-ASP.NET Core 3.1 <br>
+ASP.NET Core 3.1 - Install ASP.NET Core 3.1 SDK if not available on machine https://dotnet.microsoft.com/en-us/download/dotnet/3.1 <br>
 Mongo Db Server
 <h4>Packages<h4>
 <p>
@@ -14,7 +14,7 @@ Mongo Db Server
   
   <h2>How to run</h2>
   <ol>
-    <li>Build the project</li>
+    <li>Build the solution</li>
     <li>Right click on Solution Explorer and set startup projects to both "SparkPlug" and "SparkPlug.Web"</li>
     <li>Install the following packages if not properly installed by the project build - AutoMapper.Extensions.Microsoft.DependencyInjection, Microsoft.AspNetCore.Cors, MongoDB.Driver
     <li>Start project</li>
