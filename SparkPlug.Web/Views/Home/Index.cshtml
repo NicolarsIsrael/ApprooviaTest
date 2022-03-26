@@ -113,28 +113,14 @@
 
             if (message == "") { //start processing form when there are no errors
 
-                var formdata = new FormData(sparkPlugFeedback); // get data from the form
-
-                // create object data
-                var item = {
-                    CustomerName: mySPCustomerName.value,
-                    CustomerEmail: mySPCustomerEmail.value,
-                    CustomerMessage: mySPCustomerMessage.value,
-                    DomainName: mySPFormDomainName.value,
-                    FormName: mySPFormName.value,
-                };
+                var formdata = new FormData(mySparkPlugFeedback); // get data from the form
 
                 var endpoint = 'https://localhost:44387/api/feedback'; //change this to a valid endpoint;
 
-
                 fetch(endpoint, {
                     method: 'post',
-                    body: JSON.stringify(item),
+                    body: formdata,
                     mode: 'cors',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
 
                 }) // send the form data to a 'cors' enabled endpoint
 

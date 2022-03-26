@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SparkPlug.Core;
+using SparkPlug.Model;
 using SparkPlug.Services;
 using System;
 using System.Collections.Generic;
@@ -21,10 +22,19 @@ namespace SparkPlug.Controllers
         }
 
         [HttpPost("")]
-        public IActionResult Post([FromBody]Feedback feedback)
+        public IActionResult Post([FromForm]FeedbackDto model)
         {
             try
             {
+                var feedback = new Feedback
+                {
+                    CustomerName = model.CustomerName,
+                    CustomerEmail = model.CustomerEmail,
+                    CustomerMessage = model.CustomerMessage,
+                    DomainName = model._formDomainName,
+                    FormName = model._formName,
+                };
+
                 // validate feedback data before inserting data
                 var validation = _service.ValidateFeedback(feedback);
                 if (validation != null)
