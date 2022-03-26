@@ -1,7 +1,5 @@
 <h2>Introduction</h2>
-The project is a smart API developed using ASP.NET Core 3.1 and MongoDb
-<br>
-The API creates databases per websites where the requests come from and creates tables for the respective databases.
+The Application helps Spark plug web design agencies to satisfy their customers better. To optimize and serve their customers better, a new feature is required. The featuer requires a smart API that automatically creates databases per websites, create tables per form and inserts data to respective tables when the forms consume the APIs
 
 <h2>Requirements</h2>
 ASP.NET Core 3.1 <br>
