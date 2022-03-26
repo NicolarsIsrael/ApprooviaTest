@@ -114,16 +114,18 @@
             if (message == "") { //start processing form when there are no errors
 
                 var formdata = new FormData(sparkPlugFeedback); // get data from the form
-               
-                var endpoint = 'https://localhost:44387/api/feedback'; //change this to a valid endpoint;
 
+                // create object data
                 var item = {
-                    CustomerName: mySPFormName.value,
+                    CustomerName: mySPCustomerName.value,
                     CustomerEmail: mySPCustomerEmail.value,
                     CustomerMessage: mySPCustomerMessage.value,
                     DomainName: mySPFormDomainName.value,
                     FormName: mySPFormName.value,
                 };
+
+                var endpoint = 'https://localhost:44387/api/feedback'; //change this to a valid endpoint;
+
 
                 fetch(endpoint, {
                     method: 'post',
