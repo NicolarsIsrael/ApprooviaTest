@@ -27,17 +27,19 @@ namespace SparkPlug
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<DatabaseSettings>(
-                Configuration.GetSection(nameof(DatabaseSettings)));
-
-
-            services.AddSingleton<IDatabaseSettings>(provider =>
-                provider.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+            
 
             services.AddControllers().AddJsonOptions(
         options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
+            // Configure service for dependency injection
             services.AddScoped<FeedbackService>();
+
+            services.Configure<DatabaseSettings>(
+                Configuration.GetSection(nameof(DatabaseSettings)));
+
+            services.AddSingleton<IDatabaseSettings>(provider =>
+                provider.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
@@ -46,6 +48,7 @@ namespace SparkPlug
                        .AllowAnyHeader();
             }));
 
+            // Automapper configuration
             services.AddAutoMapper(typeof(Startup));
         }
 

@@ -12,6 +12,7 @@ namespace SparkPlug.Helpers
     {
         public AutoMappingProfile()
         {
+            // Map FeedbackDto and Feedback
             CreateMap<FeedbackDto, Feedback>()
                 .ForMember(f => f.FormName, opt => opt.MapFrom(src => src._formName))
                 .ForMember(f => f.DomainName, opt => opt.MapFrom(src => src._formDomainName));

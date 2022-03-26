@@ -25,11 +25,17 @@ namespace SparkPlug.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Api endpoint to post feedbacks from customers
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost("")]
         public IActionResult Post([FromForm]FeedbackDto model)
         {
             try
             {
+                // map the model to a new Feedback object
                 var feedback = _mapper.Map<Feedback>(model);
 
                 // validate the feedback data
