@@ -12,7 +12,6 @@ namespace SparkPlug.Services
     public class FeedbackService
     {
         private MongoClient mongoClient;
-        private IDatabaseSettings _settings;
         public FeedbackService(IDatabaseSettings settings)
         {
             mongoClient = new MongoClient(settings.ConnectionString);
