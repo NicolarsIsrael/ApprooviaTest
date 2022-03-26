@@ -31,6 +31,8 @@ namespace SparkPlug.Controllers
             try
             {
                 var feedback = _mapper.Map<Feedback>(model);
+
+                // validate the feedback data
                 var validation = _service.ValidateFeedback(feedback);
                 if (validation != null)
                     return Ok(new { success = false, message = validation });
