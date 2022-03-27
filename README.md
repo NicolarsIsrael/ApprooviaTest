@@ -1,6 +1,9 @@
 <h2>Introduction</h2>
 The Application helps Spark plug web design agencies to satisfy their customers better. To optimize and serve their customers better, a new feature is required. The featuer requires a smart API that automatically creates databases per websites, create tables per form and inserts data to respective tables when the forms consume the APIs
 
+check here https://github.com/Approovia-Limited/CodingChallenge-03-22 for full description
+
+
 <h2>Requirements</h2>
 - The application targets ASP.NET Core 3.1 - Download and Install ASP.NET Core 3.1 SDK and ASP.NET Core 3.1 Runtime if not available on your machine. Both packages can be found here https://dotnet.microsoft.com/en-us/download/dotnet/3.1 <br>
 - MongoDb Server - You can download and install MongoDb Server here https://docs.mongodb.com/manual/administration/install-community/
